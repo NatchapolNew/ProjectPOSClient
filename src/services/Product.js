@@ -27,3 +27,42 @@ export const listProduct = async (token) => {
     console.log(err);
   }
 };
+
+export const getProductById = async(token,id)=>{
+  try{
+    const res = await axios.get(API_URL+"/products/"+id,{
+      headers:{
+        Authorization:`Bearer ${token}`,
+      },
+    })
+    return res
+  }catch(err){
+    console.log(err)
+  }
+}
+
+export const updateProduct = async(token,id,form)=>{
+try{
+  const res = await axios.put(API_URL+"/products/"+id,form,{
+    headers:{
+      Authorization: `Bearer ${token}`
+    }
+  })
+}catch(err){
+  console.log(err);
+}
+}
+
+
+export const deleteProduct = async(token,id)=>{
+  try{
+    const res = await axios.delete(API_URL+"/products/"+id,{
+      headers:{
+        Authorization:`Bearer ${token}`,
+      },
+    });
+    return res
+  }catch(err){
+
+  }
+}

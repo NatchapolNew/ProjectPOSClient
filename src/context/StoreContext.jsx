@@ -14,6 +14,10 @@ export const StoreContextProvider = ({ children }) => {
     setProduct(res.data)
   }
 
+  // const SearchProductFilter = ()=>{
+
+  // }
+
   const loadCategory = async (token) => {
     const res = await getAllCategory(token);
     setCategory(res.data);

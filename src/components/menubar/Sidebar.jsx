@@ -12,8 +12,6 @@ const Sidebar = () => {
                 <div className="list-group list-group-flush">
                     <Link className="list-group-item list-group-item-action list-group-item-light p-3" to={"/panel/createproduct"}>
                       <i className="bi bi-plus-circle me-2"/>เพิ่มข้อมูลสินค้า</Link>
-                    <Link className="list-group-item list-group-item-action list-group-item-light p-3" to={"/panel/listfood"}>
-                      <i className="bi bi-list-ul me-2"/>สินค้าทั้งหมด</Link>
                     <Link className="list-group-item list-group-item-action list-group-item-light p-3" to={"/panel/createorder"}>
                       <i className="bi bi-cart me-2"/>จำนวนออเดอร์</Link>
                     
