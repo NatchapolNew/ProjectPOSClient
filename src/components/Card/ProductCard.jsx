@@ -4,7 +4,6 @@ import { Trash, Pencil } from "lucide-react";
 import { Link } from "react-router-dom";
 import { deleteProduct } from "../../services/Product";
 import { toast } from "react-toastify";
-import SearchCard from "./SearchCard";
 const ProductCard = () => {
   const { token, product, loadProduct, category } = useContext(StoreContext);
 
@@ -35,7 +34,7 @@ const handleDelete = async(id)=>{
 
   return (
     <>
-      <SearchCard/>
+      
 
 
       <table class="min-w-full border border-gray-300">
