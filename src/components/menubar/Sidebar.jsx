@@ -1,13 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState,useEffect, useContext } from "react";
-import { StoreContext } from "../../context/StoreContext";
+import logo from "../../assets/fashion-woman-profile-logo.png"
 
 const Sidebar = () => {
   return (
     <>
        <div className="border-end bg-white" id="sidebar-wrapper">
-                <div className="sidebar-heading border-bottom bg-light">
-                  <img src="" alt="" height={100} width={100} className="ml-2"/>
+                <div className="sidebar-heading border-bottom bg-light flex justify-center h-50">
+                  <img src={logo} alt="" height={100} width={100} className="ml-2"/>
                 </div>
                 <div className="list-group list-group-flush">
                     <Link className="list-group-item list-group-item-action list-group-item-light p-3" to={"/panel/createproduct"}>
