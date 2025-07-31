@@ -14,3 +14,16 @@ export const getAllCategory = async (token) => {
     console.log(err);
   }
 };
+
+export const createCategory = async (token, form) => {
+  try {
+   const res = await axios.post(API_URL + "/categories", form, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return res;
+  } catch (err) {
+    console.log(err);
+  }
+};

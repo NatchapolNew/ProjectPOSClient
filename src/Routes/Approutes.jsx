@@ -5,6 +5,7 @@ import Login from "../components/login/Login";
 import Product from "../pages/Product";
 import FormCreateOrder from "../components/Form/FormCreateOrder";
 import FormEditProduct from "../components/Form/FormEditProduct";
+import FormCategory from "../components/Form/FormCategory";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "createorder",
         element: <FormCreateOrder />,
+      },
+      {
+        path: "createcategory",
+        element: <FormCategory/>,
       },
     ],
   },
