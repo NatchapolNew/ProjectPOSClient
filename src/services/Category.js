@@ -27,3 +27,16 @@ export const createCategory = async (token, form) => {
     console.log(err);
   }
 };
+
+export const deleteCategory = async(token,id)=>{
+  try{
+    const res = await axios.delete(API_URL+"/categories/"+id,{
+      headers:{
+        Authorization:`Bearer ${token}`
+      }
+    })
+    return res;
+  }catch(err){
+    console.log(err)
+  }
+}
