@@ -41,6 +41,19 @@ export const getProductById = async (token, id) => {
   }
 };
 
+export const getProductByBarcode = async (token, barcode) => {
+  try {
+    const res = await axios.get(API_URL + "/products/barcode/" + barcode, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return res.data;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 export const getProductByName = async (token, name) => {
   try {
     const res = await axios.get(API_URL + "/products/search", {
