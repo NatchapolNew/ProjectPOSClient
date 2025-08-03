@@ -15,9 +15,22 @@ export const getAllCategory = async (token) => {
   }
 };
 
+export const getCategoryById = async (token,id) => {
+  try {
+    const res = await axios.get(API_URL + "/categories/"+id, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return res.data;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 export const createCategory = async (token, form) => {
   try {
-   const res = await axios.post(API_URL + "/categories", form, {
+    const res = await axios.post(API_URL + "/categories", form, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -28,15 +41,28 @@ export const createCategory = async (token, form) => {
   }
 };
 
-export const deleteCategory = async(token,id)=>{
-  try{
-    const res = await axios.delete(API_URL+"/categories/"+id,{
-      headers:{
-        Authorization:`Bearer ${token}`
-      }
-    })
+export const deleteCategory = async (token, id) => {
+  try {
+    const res = await axios.delete(API_URL + "/categories/" + id, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
     return res;
-  }catch(err){
-    console.log(err)
+  } catch (err) {
+    console.log(err);
   }
-}
+};
+
+export const updateCategory = async (token, id,form) => {
+  try {
+    const res = await axios.put(API_URL + "/categories/" + id,form, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return res;
+  } catch (err) {
+    console.log(err);
+  }
+};

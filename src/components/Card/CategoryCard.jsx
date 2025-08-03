@@ -48,7 +48,7 @@ const CategoryCard = () => {
                       className="bg-yellow-500 rounded-md p-1 shadow-md 
                     hover:scale-105 hover:translate-y-1 hover:duration-200"
                     >
-                      <Link to={"/panel/editproduct/" + cate.id}>
+                      <Link to={"/panel/editcategory/" + cate.id}>
                         <Pencil />
                       </Link>
                     </p>
