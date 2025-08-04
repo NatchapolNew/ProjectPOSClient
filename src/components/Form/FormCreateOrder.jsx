@@ -130,7 +130,7 @@ const FormCreateOrder = () => {
     <>
 
     <div className="bg-blue-900 w-full text-white flex justify-center h-28 items-center">
-        <h3>เพิ่มใบเสร็จ</h3>
+        <h3>คิดเงิน</h3>
       </div>
 
       <form>

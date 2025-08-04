@@ -90,7 +90,7 @@ const FormViewOrders = () => {
           </div>
         </form>
 
-        <div>
+        <div className="mt-10">
           <OrderCard orders={orders} />
         </div>
       </div>

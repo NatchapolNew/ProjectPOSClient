@@ -18,9 +18,9 @@ const router = createBrowserRouter([
     path: "panel",
     element: <ProtectRoute element={<Layout />} />,
     children: [
-      // {
-      //     index:true,element:<Product/>,
-      // },
+      {
+          index:true,element:<FormCreateOrder/>,
+      },
       {
         path: "createproduct",
         element: <Product />,
