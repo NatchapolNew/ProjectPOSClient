@@ -59,13 +59,13 @@ const FormProduct = () => {
 
   return (
     <>
-    <div className="text-zinc-700">
+    <div className="bg-blue-900 w-full text-white flex justify-center h-28 items-center">
       <h4>เพิ่มข้อมูลสินค้า</h4>
     </div>
       <form 
-      className="border-1 border-zinc-300 h-70"
+      className="border-1 border-zinc-300 h-70 bg-zinc-100"
       onSubmit={handleOnSubmit}>
-        <div className="flex gap-2 mt-20 ml-15 text-zinc-600">
+        <div className="flex gap-2 mt-20 ml-15 text-zinc-700">
           <div>
             <p className="font-bold text-xl">บาร์โค้ดสินค้า</p>
             <input
@@ -150,7 +150,7 @@ const FormProduct = () => {
             </select>
           </div>
           <div className="relative mt-10 text-black ">
-            <button className="border-2 rounded-md h-8 font-bold border-zinc-400 bg-zinc-400 w-20">
+            <button className=" bg-green-500  text-gray-100 h-8 w-20  hover:bg-green-600 duration-200">
               เพิ่มสินค้า
             </button>
           </div>

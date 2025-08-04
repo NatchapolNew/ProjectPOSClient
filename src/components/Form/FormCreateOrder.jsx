@@ -37,6 +37,7 @@ const FormCreateOrder = () => {
       setForm(initialState);
       barcodeRef.current?.focus();
       loadProduct(token);
+      toast.success("เพิ่มใบเสร็จเรียบร้อยแล้ว")
     } catch (err) {
       console.log(err);
     }
@@ -128,10 +129,13 @@ const FormCreateOrder = () => {
   return (
     <>
 
-    <h5>เพิ่มใบออเดอร์</h5>
+    <div className="bg-blue-900 w-full text-white flex justify-center h-28 items-center">
+        <h3>เพิ่มใบออเดอร์</h3>
+      </div>
+
       <form>
         {/* input barcode */}
-        <div className="flex">
+        <div className="flex mt-4 justify-items-center">
           <div className="mr-2">บาร์โค้ดสินค้า</div>
           <input
             ref={barcodeRef}
@@ -151,7 +155,7 @@ const FormCreateOrder = () => {
               <th class="border px-4 py-2 text-left">ลำดับ</th>
               <th class="border px-4 py-2 text-left">ชื่อสินค้า</th>
               <th class="border px-4 py-2 text-left">จำนวนสินค้า</th>
-              <th class="border px-4 py-2 text-left">ราคา</th>
+              <th class="border px-4 py-2 text-left">ราคา(บาท)</th>
               <th class="border px-4 py-2 text-left">ลบ</th>
             </tr>
           </thead>
@@ -160,14 +164,14 @@ const FormCreateOrder = () => {
               <tr>
                 <td class="border px-4 py-2">{index + 1}</td>
                 <td class="border px-4 py-2">{item.productName}</td>
-                <td class="border px-4 py-2">{item.quantity}</td>
+                <td class="border px-4 py-2">{item.quantity}x{item.productPrice}</td>
                 <td class="border px-4 py-2">
                   {item.productPrice * item.quantity}
                 </td>
                 <td class="border px-4 py-2">
                   <div className="flex gap-2 justify-center items-center">
                     <p
-                      className="bg-red-500 w-8 rounded-md p-1 shadow-md hover:cursor-pointer
+                      className="bg-red-500 w-8 rounded-md p-1 mt-3 shadow-md hover:cursor-pointer
                       hover:scale-105 hover:translate-y-1 hover:duration-200"
                       onClick={() => handleDelete(item.productId)}
                     >

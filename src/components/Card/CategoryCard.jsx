@@ -33,7 +33,7 @@ const CategoryCard = () => {
           <thead class="bg-gray-200">
             <tr>
               <th class="border px-4 py-2 text-left">ลำดับ</th>
-              <th class="border px-4 py-2 text-left">ชื่อสินค้า</th>
+              <th class="border px-4 py-2 text-left">ชื่อประเภทสินค้า</th>
               <th class="border px-4 py-2 text-left">แก้ไข/ลบ</th>
             </tr>
           </thead>

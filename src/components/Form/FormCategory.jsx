@@ -37,8 +37,8 @@ const FormCategory = () => {
 
   return (
     <>
-      <div className="text-zinc-700">
-        <h4>เพิ่มประเภทสินค้า</h4>
+      <div className="bg-blue-900 w-full text-white flex justify-center h-28 items-center">
+        <h3>เพิ่มประเภทสินค้า</h3>
       </div>
       <form className="border-1 border-zinc-300 h-70" onSubmit={handleOnSubmit}>
         <div className="flex gap-2 mt-20 ml-15 text-zinc-600">
@@ -55,8 +55,8 @@ const FormCategory = () => {
             />
           </div>
 
-          <div className="relative mt-10 text-black ">
-            <button className="border-2 rounded-md h-8 font-bold border-zinc-400 bg-zinc-400 w-40 hover:bg-zinc-600">
+          <div className="relative mt-10 text-black">
+            <button className=" bg-green-500  text-white h-8 w-40 hover:bg-green-600 duration-200">
               เพิ่มประเภทสินค้า
             </button>
           </div>
