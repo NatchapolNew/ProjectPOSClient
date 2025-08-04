@@ -55,12 +55,12 @@ const FormProduct = () => {
       toast.error("เพิ่มข้อมูลไม่สำเร็จ,หรือมีสินค้านี้แล้วในระบบ");
     }
   };
-  console.log(form);
 
+  
   return (
     <>
     <div className="bg-blue-900 w-full text-white flex justify-center h-28 items-center">
-      <h4>เพิ่มข้อมูลสินค้า</h4>
+      <h3>เพิ่มข้อมูลสินค้า</h3>
     </div>
       <form 
       className="border-1 border-zinc-300 h-70 bg-zinc-100"

@@ -15,7 +15,6 @@ export const StoreContextProvider = ({ children }) => {
     //clone product array for react detect and re-render
     const quantityProduct = [...product].sort((a,b)=> order === "asc"? a.quantity-b.quantity:b.quantity-a.quantity)
     setProduct(quantityProduct)
-    console.log(product)
   }
 
   const loadProduct = async(token)=>{

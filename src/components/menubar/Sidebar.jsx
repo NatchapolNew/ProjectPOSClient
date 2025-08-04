@@ -14,7 +14,9 @@ const Sidebar = () => {
                     <Link className="list-group-item list-group-item-action list-group-item-light p-3" to={"/panel/createcategory"}>
                       <i className="bi bi-cart me-2"/>เพิ่มประเภทสินค้า</Link>
                     <Link className="list-group-item list-group-item-action list-group-item-light p-3" to={"/panel/createorder"}>
-                      <i className="bi bi-cart me-2"/>เพิ่มออเดอร์</Link>
+                      <i className="bi bi-cart me-2"/>เพิ่มใบเสร็จ</Link>
+                    <Link className="list-group-item list-group-item-action list-group-item-light p-3" to={"/panel/vieworder"}>
+                      <i className="bi bi-cart me-2"/>ดูใบเสร็จ</Link>
                     
                 </div>
             </div>

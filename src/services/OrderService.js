@@ -21,7 +21,7 @@ export const getAllOrder = async (token) => {
         Authorization: `Bearer ${token}`,
       },
     });
-    return res;
+    return res.data;
   } catch (err) {
     console.log(err);
   }
@@ -29,7 +29,7 @@ export const getAllOrder = async (token) => {
 
 export const getOrderByDate = async (token, startDate, endDate) => {
   try {
-    const res = await axios.get(API_URL + "order/by-range", {
+    const res = await axios.get(API_URL + "/order/by-range", {
       params: {
         start: startDate,
         end: endDate,
@@ -38,6 +38,7 @@ export const getOrderByDate = async (token, startDate, endDate) => {
         Authorization: `Bearer ${token}`,
       },
     });
+    return res.data
   } catch (err) {
     console.log(err);
   }
