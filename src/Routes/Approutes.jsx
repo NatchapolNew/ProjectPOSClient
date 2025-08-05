@@ -8,6 +8,8 @@ import FormEditProduct from "../components/Form/FormEditProduct";
 import FormCategory from "../components/Form/FormCategory";
 import FormEditCategory from "../components/Form/FormEditCategory";
 import FormViewOrders from "../components/Form/FormViewOrder";
+import FormCreditNote from "../components/Form/FormCreditNote";
+import FormViewCreditNote from "../components/Form/FormViewCreditNote";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +47,14 @@ const router = createBrowserRouter([
       {
         path: "vieworder",
         element: <FormViewOrders/>,
+      },
+      {
+        path: "createcreditnote",
+        element: <FormCreditNote/>,
+      },
+      {
+        path: "viewcreditnote",
+        element: <FormViewCreditNote/>,
       },
     ],
   },

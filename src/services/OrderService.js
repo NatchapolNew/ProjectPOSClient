@@ -27,6 +27,19 @@ export const getAllOrder = async (token) => {
   }
 };
 
+export const getOrderById = async (token,id) => {
+  try {
+    const res = await axios.get(API_URL + "/order/"+id, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return res;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 export const getOrderByDate = async (token, startDate, endDate) => {
   try {
     const res = await axios.get(API_URL + "/order/by-range", {

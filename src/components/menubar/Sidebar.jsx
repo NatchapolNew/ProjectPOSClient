@@ -14,6 +14,10 @@ const Sidebar = () => {
                     </Link>
                     <Link className="list-group-item list-group-item-action list-group-item-light p-3" to={"/panel/vieworder"}>
                       <i className="bi bi-cart me-2"/>ใบเสร็จ/ยอดขาย</Link>
+                    <Link className="list-group-item list-group-item-action list-group-item-light p-3" to={"/panel/createcreditnote"}>
+                      <i className="bi bi-cart me-2"/>คืนสินค้า</Link>
+                    <Link className="list-group-item list-group-item-action list-group-item-light p-3" to={"/panel/viewcreditnote"}>
+                      <i className="bi bi-cart me-2"/>ใบคืนสินค้า</Link>
                     <Link className="list-group-item list-group-item-action list-group-item-light p-3" to={"/panel/createproduct"}>
                       <i className="bi bi-plus-circle me-2"/>เพิ่มข้อมูลสินค้า</Link>
                     <Link className="list-group-item list-group-item-action list-group-item-light p-3" to={"/panel/createcategory"}>

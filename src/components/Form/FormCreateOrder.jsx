@@ -111,6 +111,8 @@ const FormCreateOrder = () => {
           });
         } else {
           toast.error("ไม่พบรหัสสินค้า");
+          setBarcode("");
+          barcodeRef.current?.focus();
           return;
         }
         setBarcode("");
@@ -193,12 +195,12 @@ const FormCreateOrder = () => {
               <p className="font-bold">รวมทั้งหมด</p>
             </div>
             <div className="ml-2">
-              <p>{totalPrice.toFixed(2)} บาท</p>
+              <p>{(totalPrice?? 0).toFixed(2)} บาท</p>
             </div>
           </div>
 
 
-          <div className="flex justify-center">
+          <div className="flex justify-center text-red-500">
             <div>
               <p className="font-bold">ส่วนลด</p>
             </div>
@@ -208,7 +210,7 @@ const FormCreateOrder = () => {
             </div>
           </div>
 
-          <div className="flex justify-center">
+          <div className="flex justify-center text-red-500">
             <div>
               <p className="font-bold">Tax 7 %</p>
             </div>
@@ -218,12 +220,12 @@ const FormCreateOrder = () => {
             </div>
           </div>
 
-          <div className="flex justify-center">
+          <div className="flex justify-center text-green-500">
             <div>
               <p className="font-bold">ราคาสุทธิ</p>
             </div>
             <div className="ml-2">
-              <p>{totalPrice.toFixed(2)} บาท</p>
+              <p>{(totalPrice?? 0).toFixed(2)} บาท</p>
             </div>
           </div>
         </div>
