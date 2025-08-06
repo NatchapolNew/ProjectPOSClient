@@ -51,7 +51,7 @@ export const getCreditNoteByDate = async (token, startDate, endDate) => {
         Authorization: `Bearer ${token}`,
       },
     });
-    return res.data
+    return res;
   } catch (err) {
     console.log(err);
   }

@@ -2,7 +2,6 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { StoreContext } from "../../context/StoreContext";
 import {
   createCreditNote,
-  getCreditNoteById,
 } from "../../services/CreditNoteService";
 import { getProductByBarcode } from "../../services/Product";
 import { Trash } from "lucide-react";
@@ -21,8 +20,6 @@ const FormCreditNote = () => {
   const barcodeRef = useRef(null);
   const [form, setForm] = useState(initialState);
   const [check,setCheck] = useState(true)
-
-  console.log(form);
 
   const totalPrice = form?.creditNoteItems?.reduce((prev, curr) => {
     return prev + curr.productPrice * curr.quantity;
@@ -160,7 +157,7 @@ const FormCreditNote = () => {
             value={barcode}
           />
         </div>
-        {/* input notice*/}
+        {/* input notice and check receipt*/}
         <div className="flex mt-4 justify-items-center">
           <div className="mr-2">เลขที่ใบเสร็จ</div>
           <input
@@ -173,7 +170,7 @@ const FormCreditNote = () => {
           />
           <div className="bg-green-500 w-20 text-center ml-2 rounded-md text-white hover:bg-green-600">
 
-          <button  onClick={findOrderId}>ค้นหา</button> 
+          <button  onClick={findOrderId}>Check</button> 
           </div>
         </div>
 
