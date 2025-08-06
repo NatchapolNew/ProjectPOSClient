@@ -59,7 +59,7 @@ const FormProduct = () => {
   
   return (
     <>
-    <div className="bg-blue-900 w-full text-white flex justify-center h-28 items-center">
+    <div className="bg-pink-500 w-full text-white flex justify-center h-28 items-center">
       <h3>เพิ่มข้อมูลสินค้า</h3>
     </div>
       <form 

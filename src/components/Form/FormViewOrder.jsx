@@ -54,7 +54,7 @@ const FormViewOrders = () => {
 
   return (
     <>
-    <div className="bg-blue-900 w-full text-white flex justify-center h-28 items-center">
+    <div className="bg-pink-500 w-full text-white flex justify-center h-28 items-center">
       <h3>ค้นหาใบเสร็จ/ยอดขาย</h3>
     </div>
       <div className="mt-10">

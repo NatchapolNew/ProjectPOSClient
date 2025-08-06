@@ -1,12 +1,12 @@
 import { Link, useNavigate} from "react-router-dom";
-import logo from "../../assets/fashion-woman-profile-logo.png";
+import logo from "../../assets/beauty.png";
 import { CirclePlus, FileMinus, ListPlus, LogOut, PackageMinus, ReceiptText, ScanBarcode } from "lucide-react";
 import { useContext, useEffect } from "react";
 import { StoreContext } from "../../context/StoreContext";
 
 const Sidebar = () => {
   const navigate = useNavigate();
-  const {setToken,token} = useContext(StoreContext);
+  const {setToken} = useContext(StoreContext);
 
   useEffect(()=>{
     setToken(localStorage.getItem("token"))
@@ -17,11 +17,11 @@ const Sidebar = () => {
   }
   return (
     <>
-      <div className="border-end bg-white" id="sidebar-wrapper">
+      <div className="border-end bg-white font-semibold" id="sidebar-wrapper">
         <div className="sidebar-heading border-bottom bg-light flex justify-center h-50">
-          <img src={logo} alt="" height={100} width={100} className="ml-2" />
+          <img src={logo} alt="" height={300} width={300} className="ml-2" />
         </div>
-        <div className="list-group list-group-flush gap-2 flex">
+        <div className="list-group list-group-flush gap-2 flex mt-3">
           <Link
             className="list-group-item list-group-item-action list-group-item-light p-3"
             to={"/panel/createorder"}
@@ -83,7 +83,7 @@ const Sidebar = () => {
 
         <div 
         onClick={handleLogut}
-        className="flex relative top-40 left-3 cursor-pointer hover:text-red-500">
+        className="flex relative top-20 left-3 cursor-pointer hover:text-red-500">
           <LogOut/><span>ออกจากระบบ</span>
         </div>
 

@@ -139,7 +139,7 @@ const FormCreditNote = () => {
 
   return (
     <>
-      <div className="bg-blue-900 w-full text-white flex justify-center h-28 items-center">
+      <div className="bg-pink-500 w-full text-white flex justify-center h-28 items-center">
         <h3>คืนสินค้า</h3>
       </div>
 
@@ -159,7 +159,7 @@ const FormCreditNote = () => {
         </div>
         {/* input notice and check receipt*/}
         <div className="flex mt-4 justify-items-center">
-          <div className="mr-2">เลขที่ใบเสร็จ</div>
+          <div className="mr-3">เลขที่ใบเสร็จ</div>
           <input
             className="border-1"
             type="text"
@@ -176,10 +176,9 @@ const FormCreditNote = () => {
 
 
         <div className="flex mt-4 justify-items-center">
-          <div className="mr-2">หมายเหตุ</div>
+          <div className="mr-8">หมายเหตุ</div>
           <textarea
-            className="border-1 resize-none w-full"
-            type="text"
+            className="border-1 resize-none w-full h-24"
             onChange={handleOnChange}
             name="note"
             value={form.note}
@@ -228,7 +227,7 @@ const FormCreditNote = () => {
         {/* total */}
         <div className="mt-2 border w-full bg-gray-200">
           <div className="mt-3">
-            <div className="flex justify-center text-green-500">
+            <div className="flex justify-center text-red-500">
               <div>
                 <p className="font-bold">รวมเงินคืนทั้งหมด</p>
               </div>

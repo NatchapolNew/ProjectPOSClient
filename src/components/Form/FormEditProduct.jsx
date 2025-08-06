@@ -53,8 +53,10 @@ const FormEditProduct = () => {
   };
   return (
     <>
+    <div className="bg-blue-900 w-full text-white flex justify-center h-28 items-center">
+        <h3>แก้ไขสินค้า</h3>
+      </div>
       <form onSubmit={handleOnSubmit}>
-        <h1>แก้ไขข้อมูลสินค้า</h1>
         <div className="flex gap-2 mt-20 ml-15">
           <div>
             <p className="font-bold text-xl">บาร์โค้ดสินค้า</p>
@@ -140,7 +142,7 @@ const FormEditProduct = () => {
             </select>
           </div>
           <div className="relative mt-10">
-            <button className="border-2 rounded-md h-8 font-bold border-zinc-400 bg-zinc-400 w-20">
+            <button className="border-2 rounded-md h-8 font-bold bg-green-500 w-20 text-white hover:bg-green-600">
               เพิ่มสินค้า
             </button>
           </div>

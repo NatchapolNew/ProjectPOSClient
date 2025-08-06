@@ -37,7 +37,7 @@ const FormCategory = () => {
 
   return (
     <>
-      <div className="bg-blue-900 w-full text-white flex justify-center h-28 items-center">
+      <div className="bg-pink-500 w-full text-white flex justify-center h-28 items-center">
         <h3>เพิ่มประเภทสินค้า</h3>
       </div>
       <form className="border-1 border-zinc-300 h-70" onSubmit={handleOnSubmit}>
