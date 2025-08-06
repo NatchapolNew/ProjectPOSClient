@@ -1,8 +1,20 @@
-import { Link} from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import logo from "../../assets/fashion-woman-profile-logo.png";
 import { CirclePlus, FileMinus, ListPlus, LogOut, PackageMinus, ReceiptText, ScanBarcode } from "lucide-react";
+import { useContext, useEffect } from "react";
+import { StoreContext } from "../../context/StoreContext";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+  const {setToken,token} = useContext(StoreContext);
+
+  useEffect(()=>{
+    setToken(localStorage.getItem("token"))
+  },[])
+  const handleLogut = ()=>{
+    setToken(localStorage.removeItem("token"))
+    navigate("/")
+  }
   return (
     <>
       <div className="border-end bg-white" id="sidebar-wrapper">
@@ -69,7 +81,9 @@ const Sidebar = () => {
           </Link>
         </div>
 
-        <div className="flex relative top-40 left-3 cursor-pointer hover:text-red-500">
+        <div 
+        onClick={handleLogut}
+        className="flex relative top-40 left-3 cursor-pointer hover:text-red-500">
           <LogOut/><span>ออกจากระบบ</span>
         </div>
 
