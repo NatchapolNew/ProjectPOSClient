@@ -234,9 +234,10 @@ const FormCreateOrder = () => {
 
         <div className="flex justify-center">
           <button
-            className="w-full bg-green-500  text-white h-10 mt-1 hover:bg-green-600 duration-200"
+             className={`w-full ${form.orderItems.length != 0  ? "bg-green-500  text-white h-10 mt-1 hover:bg-green-600 duration-200":"bg-gray-600  text-white h-10 mt-1 hover:bg-gray-700 duration-200"}`}
             type="submit"
             onClick={handleSubmit}
+            disabled={form.orderItems.length === 0}
           >
             ยืนยัน
           </button>
