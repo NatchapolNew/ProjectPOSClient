@@ -23,7 +23,7 @@ const CreditNoteCard = ({creditNotes}) => {
             <div className="mt-3">    
               <div className="flex justify-center text-red-500">
                 <div>
-                  <p className="font-bold">รวมทั้งหมด :</p>
+                  <p className="font-bold">รวมคืนทั้งหมด :</p>
                 </div>
                 <div className="ml-2 ">
                   <p  >{(totalAmount).toFixed(2)} บาท</p>
@@ -76,7 +76,7 @@ const CreditNoteCard = ({creditNotes}) => {
                 ))
               ):(
                 <tr>
-                  <td colSpan="4" className="text-center py-4 text-gray-500">
+                  <td colSpan="6" className="text-center py-4 text-gray-500">
                   ไม่พบรายการใบเสร็จ
                   </td>
                 </tr>

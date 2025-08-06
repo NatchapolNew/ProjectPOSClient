@@ -1,33 +1,79 @@
-import { Link, useNavigate } from "react-router-dom";
-import logo from "../../assets/fashion-woman-profile-logo.png"
+import { Link} from "react-router-dom";
+import logo from "../../assets/fashion-woman-profile-logo.png";
+import { CirclePlus, FileMinus, ListPlus, LogOut, PackageMinus, ReceiptText, ScanBarcode } from "lucide-react";
 
 const Sidebar = () => {
   return (
     <>
-       <div className="border-end bg-white" id="sidebar-wrapper">
-                <div className="sidebar-heading border-bottom bg-light flex justify-center h-50">
-                  <img src={logo} alt="" height={100} width={100} className="ml-2"/>
-                </div>
-                <div className="list-group list-group-flush gap-2">
-                  <Link className="list-group-item list-group-item-action list-group-item-light p-3" to={"/panel/createorder"}>
-                      <i className="bi bi-cart me-2"/>คิดเงิน
-                    </Link>
-                    <Link className="list-group-item list-group-item-action list-group-item-light p-3" to={"/panel/vieworder"}>
-                      <i className="bi bi-cart me-2"/>ใบเสร็จ/ยอดขาย</Link>
-                    <Link className="list-group-item list-group-item-action list-group-item-light p-3" to={"/panel/createcreditnote"}>
-                      <i className="bi bi-cart me-2"/>คืนสินค้า</Link>
-                    <Link className="list-group-item list-group-item-action list-group-item-light p-3" to={"/panel/viewcreditnote"}>
-                      <i className="bi bi-cart me-2"/>ใบคืนสินค้า</Link>
-                    <Link className="list-group-item list-group-item-action list-group-item-light p-3" to={"/panel/createproduct"}>
-                      <i className="bi bi-plus-circle me-2"/>เพิ่มข้อมูลสินค้า</Link>
-                    <Link className="list-group-item list-group-item-action list-group-item-light p-3" to={"/panel/createcategory"}>
-                      <i className="bi bi-cart me-2"/>เพิ่มประเภทสินค้า
-                      </Link>
-                    
-                    
-                </div>
+      <div className="border-end bg-white" id="sidebar-wrapper">
+        <div className="sidebar-heading border-bottom bg-light flex justify-center h-50">
+          <img src={logo} alt="" height={100} width={100} className="ml-2" />
+        </div>
+        <div className="list-group list-group-flush gap-2 flex">
+          <Link
+            className="list-group-item list-group-item-action list-group-item-light p-3"
+            to={"/panel/createorder"}
+          >
+            <div className="flex gap-2 items-center">
+              <ScanBarcode />
+              <span>คิดเงิน</span>
             </div>
-            
+          </Link>
+
+          <Link
+            className="list-group-item list-group-item-action list-group-item-light p-3"
+            to={"/panel/vieworder"}
+          >
+           <div className="flex gap-2 items-center">
+              <ReceiptText />
+              <span>ใบเสร็จ/ยอดขาย</span>
+            </div>
+          </Link>
+
+
+          <Link
+            className="list-group-item list-group-item-action list-group-item-light p-3"
+            to={"/panel/createcreditnote"}
+          >
+            <div className="flex gap-2 items-center">
+              <PackageMinus />
+              <span>คืนสินค้า</span>
+            </div>
+          </Link>
+          <Link
+            className="list-group-item list-group-item-action list-group-item-light p-3"
+            to={"/panel/viewcreditnote"}
+          >
+            <div className="flex gap-2 items-center">
+              <FileMinus />
+              <span>ใบคืนสินค้า</span>
+            </div>
+          </Link>
+          <Link
+            className="list-group-item list-group-item-action list-group-item-light p-3"
+            to={"/panel/createproduct"}
+          >
+            <div className="flex gap-2 items-center">
+              <CirclePlus />
+              <span>เพิ่มสินค้า</span>
+            </div>
+          </Link>
+          <Link
+            className="list-group-item list-group-item-action list-group-item-light p-3"
+            to={"/panel/createcategory"}
+          >
+           <div className="flex gap-2 items-center">
+              <ListPlus />
+              <span>เพิ่มประเภทสินค้า</span>
+            </div>
+          </Link>
+        </div>
+
+        <div className="flex relative top-40 left-3 cursor-pointer hover:text-red-500">
+          <LogOut/><span>ออกจากระบบ</span>
+        </div>
+
+      </div>
     </>
   );
 };
