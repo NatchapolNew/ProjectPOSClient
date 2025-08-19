@@ -63,11 +63,11 @@ const FormProduct = () => {
       <h3>เพิ่มข้อมูลสินค้า</h3>
     </div>
       <form 
-      className="border-1 border-zinc-300 h-70 bg-zinc-100"
+      className="border-1 border-zinc-300 h-70 bg-zinc-100 w-full"
       onSubmit={handleOnSubmit}>
-        <div className="flex gap-2 mt-20 ml-15 text-zinc-700">
+        <div className="flex gap-2 mt-20 ml-15 xl:flex xl:gap-2 xl:mt-20 xl:ml-15 lg:ml-3 lg:grid lg:grid-cols-4 lg:mt-18 lg:text-l text-zinc-700">
           <div>
-            <p className="font-bold text-xl">บาร์โค้ดสินค้า</p>
+            <p className="font-bold ">บาร์โค้ดสินค้า</p>
             <input
               type="text"
               name="barcode"
@@ -79,7 +79,7 @@ const FormProduct = () => {
             />
           </div>
           <div>
-            <p className="font-bold text-xl">ชื่อสินค้า</p>
+            <p className="font-bold">ชื่อสินค้า</p>
             <input
               type="text"
               name="name"
@@ -91,7 +91,7 @@ const FormProduct = () => {
             />
           </div>
           <div>
-            <p className="font-bold text-xl">ราคา</p>
+            <p className="font-bold">ราคา</p>
             <input
               type="number"
               name="price"
@@ -104,7 +104,7 @@ const FormProduct = () => {
           </div>
 
           <div>
-            <p className="font-bold text-xl">ต้นทุนสินค้า</p>
+            <p className="font-bold">ต้นทุนสินค้า</p>
             <input
               type="number"
               name="cost"
@@ -117,7 +117,7 @@ const FormProduct = () => {
           </div>
 
           <div>
-            <p className="font-bold text-xl">จำนวนสินค้า</p>
+            <p className="font-bold">จำนวนสินค้า</p>
             <input
               type="number"
               name="quantity"
@@ -130,7 +130,7 @@ const FormProduct = () => {
           </div>
 
           <div>
-            <p className="font-bold text-xl">ประเภทสินค้า</p>
+            <p className="font-bold">ประเภทสินค้า</p>
             {/* select category */}
             <select
               name="categoryId"
@@ -149,7 +149,7 @@ const FormProduct = () => {
               ))}
             </select>
           </div>
-          <div className="relative mt-10 text-black ">
+          <div className="relative mt-10 text-black">
             <button className=" bg-green-500  text-gray-100 h-8 w-20  hover:bg-green-600 duration-200">
               เพิ่มสินค้า
             </button>

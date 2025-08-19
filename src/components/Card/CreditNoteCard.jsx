@@ -14,7 +14,8 @@ const CreditNoteCard = ({creditNotes}) => {
   useEffect(()=>{
     setToken(localStorage.getItem("token"))
   },[])
-
+ 
+  console.log(creditNotes)
   return (
     <>
     <h5>ยอดคืนสินค้าทั้งหมด</h5>
@@ -69,7 +70,7 @@ const CreditNoteCard = ({creditNotes}) => {
                     {creditnotes.amount}
                   </td>
                   <td className="border px-4 py-2">
-                    {dayjs(creditnotes.orderDate).format("D MMM YYYY เวลา HH:mm น.")}
+                    {dayjs(creditnotes.date).format("D MMM YYYY เวลา HH:mm น.")}
                   </td>
                   </tr>
                   </>
