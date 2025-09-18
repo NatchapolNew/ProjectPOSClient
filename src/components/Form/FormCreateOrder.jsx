@@ -4,6 +4,9 @@ import { getProductByBarcode } from "../../services/Product";
 import { toast } from "react-toastify";
 import { createOrder } from "../../services/OrderService";
 import { Trash } from "lucide-react";
+import SearchCard from "../Card/SearchCard";
+import ProductCard from "../Card/ProductCard";
+import ShowProductOnlyCard from "../Card/ShowProductOnlyCard";
 
 const initialState = {
   orderItems: [],
@@ -240,6 +243,14 @@ const FormCreateOrder = () => {
           >
             ยืนยัน
           </button>
+        </div>
+        
+        {/* search product */}
+        <div>
+          <div>
+        <SearchCard/>
+        <ShowProductOnlyCard/>
+          </div>
         </div>
       </form>
     </>
