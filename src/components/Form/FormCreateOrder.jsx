@@ -5,7 +5,6 @@ import { toast } from "react-toastify";
 import { createOrder } from "../../services/OrderService";
 import { Trash } from "lucide-react";
 import SearchCard from "../Card/SearchCard";
-import ProductCard from "../Card/ProductCard";
 import ShowProductOnlyCard from "../Card/ShowProductOnlyCard";
 
 const initialState = {
@@ -13,7 +12,7 @@ const initialState = {
 };
 
 const FormCreateOrder = () => {
-  const { token, setToken, loadProduct, product } = useContext(StoreContext);
+  const { token, setToken, loadProduct, product,loadCategory } = useContext(StoreContext);
   const [barcode, setBarcode] = useState();
   const barcodeRef = useRef(null);
   const [form, setForm] = useState(initialState);
@@ -129,6 +128,7 @@ const FormCreateOrder = () => {
   useEffect(() => {
     setToken(localStorage.getItem("token"));
     loadProduct(token);
+    loadCategory(token);
   }, []);
 
   return (
